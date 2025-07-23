@@ -1,11 +1,12 @@
-import React, { memo, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { navigation } from "../../ultils/contant";
-import { createSearchParams, Link, NavLink } from "react-router-dom";
+import { createSearchParams, Link, NavLink, useSearchParams } from "react-router-dom";
 import { FaCaretDown } from "react-icons/fa";
 import withBase from "HOCS/withBase";
 const Navigation = ({navigate}) => {
   const [isHover, setIsHover] = useState(false);
   const [valueSearch, setValueSearch] = useState('');
+  const [searchParams] = useSearchParams();
   // const
   const handleHover = (id, on) => {
     if (on === "Move" && id === 3) {
@@ -25,6 +26,14 @@ const Navigation = ({navigate}) => {
       // Bạn có thể gọi hàm đăng nhập hoặc thực hiện hành động khác ở đây
     }
   };
+  useEffect(() => {
+    const queryValue = searchParams.get('q');
+    if (queryValue) { 
+      setValueSearch(queryValue)
+    } else { 
+      setValueSearch('')
+    }
+  }, [searchParams])
   return (
     <div className="w-full flex justify-center font-[Poppins]">
       <div className="flex items-center justify-between w-main py-2 border-y">
@@ -100,6 +109,7 @@ const Navigation = ({navigate}) => {
         <div className="w-[20%] font-[Poppins] text-sm border-r border-l border-[red] px-[10px]">
           <input
             onKeyDown={handleSearch}
+            value={valueSearch}
             onChange={(e) => setValueSearch(e.target.value)}
             id="SearSomeThing"
             type="text"

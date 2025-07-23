@@ -7,10 +7,7 @@ const SuggestProduct = ({handleShowSuggestProduct, isShowSuggestProduct}) => {
   const [product, setProduct] = useState(null);
   useEffect(() => {
     const fectchApiGetProduct = async () => {
-      const number = Math.round(Math.random() * 10);
-      console.log(number);
       const result = await apigetProducts({limit : 1});
-      console.log(result);
       if (result.success) {
         setProduct(result.response[0]);
       }

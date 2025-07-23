@@ -21,7 +21,7 @@ export const navigation = [
     id: 3,
     value: "PAGES",
     type : 'parent',
-    path: `/${path.PAGE_CONTATS_US_URL}`,
+    path: `/${path.PAGE_ABOUT_US_URL}`,
     submenu : [
       {
         text : 'About Us',

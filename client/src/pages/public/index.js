@@ -15,3 +15,4 @@ export { default as Services } from './Services';
 export { default as Heading } from './Heading';
 export { default as Faq } from './Faq';
 export { default as AboutUs } from './AboutUs';
+export { default as Search } from './Search';

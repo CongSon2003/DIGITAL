@@ -1,0 +1,413 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.loader {
+  width: 10px;
+  height: 10px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #ff3d00 transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.enlarged-image-container {
+  border: 4px solid #505050 !important; /* Bạn có thể thay đổi màu và độ dày */
+  z-index: 100;
+  width: 450px !important;
+}
+
+.triangle-bottomright {
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid red;
+  border-left: 20px solid transparent;
+}
+.small-image-container {
+  height: 450px !important;
+  object-fit: contain;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  margin-left: -20px;
+  display: flex;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 20px;
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.QuickImages button.slick-next::before {
+  color: #151515;
+  content: "\276F";
+  background-color: wheat;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .QuickImages .slick-list .slick-track .slick-active{
+  margin-right: 2px;
+} */
+ .animate__animated.animate__fadeOutRightBig {
+  /* --animate-duration: 800ms; */
+  --animate-delay: 3s;
+}
+/* 
+  // set up animation
+*/
+.animate_zoomInBottomRight {
+  width: 100%; /* Độ rộng đầy đủ */
+  height: 100%; /* Chiều cao đầy đủ */
+  transform-origin: bottom right; /* Thiết lập điểm gốc cho transform */
+  animation: zoomIn 0.3s ease forwards; /* Thêm hiệu ứng hoạt ảnh */
+}
+.animate_zoomInTopLeft {
+  width: 100%; /* Độ rộng đầy đủ */
+  height: 100%; /* Chiều cao đầy đủ */
+  transform-origin: top left; /* Thiết lập điểm gốc cho transform */
+  animation: zoomIn 0.3s ease forwards; /* Thêm hiệu ứng hoạt ảnh */
+}
+.animate_zoomOutRight {
+  width: 100%; /* Độ rộng đầy đủ */
+  height: 100%; /* Chiều cao đầy đủ */
+  transform-origin: bottom right; /* Thiết lập điểm gốc cho transform */
+  animation: zoomOut 0.6s ease forwards; /* Thêm hiệu ứng hoạt ảnh */
+}
+.animate_zoomOutLeft {
+  width: 100%; /* Độ rộng đầy đủ */
+  height: 100%; /* Chiều cao đầy đủ */
+  transform-origin: top left; /* Thiết lập điểm gốc cho transform */
+  animation: zoomOut 0.6s ease forwards; /* Thêm hiệu ứng hoạt ảnh */
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0); /* Bắt đầu từ kích thước 0 */
+  }
+  to {
+    transform: scale(1); /* Kết thúc tại kích thước đầy đủ */
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1); /* Bắt đầu từ kích thước 0 */
+  }
+  to {
+    transform: scale(0); /* Kết thúc tại kích thước đầy đủ */
+  }
+}
+.to-top.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.QuickImages button.slick-prev::before {
+  color: #151515;
+  content: "\276F";
+  background-color: wheat;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.QuickImages button.slick-prev {
+  left: 0;
+  top: 30px;
+}
+.QuickImages button.slick-next {
+  right: 30px;
+  top: 30px;
+}
+.ProductThumbs .slick-list .slick-track div div {
+  /* border: #FF3D00;
+  border-style: solid;
+  border-width: 1px; */
+  padding: 0 5px;
+}
+button.slick-next {
+  right: 80px;
+  z-index: 10;
+}
+.ProductThumbs button.slick-next {
+  top: 40px;
+  right: 60px;
+}
+.ProductThumbs button.slick-prev {
+  top: 40px;
+  left: 0px;
+}
+.Brands_Slider button.slick-next {
+  top: -3px;
+  right: 60px;
+  z-index: 10;
+}
+.Brands_Slider button.slick-prev {
+  top: -3px;
+  left: 0px;
+  z-index: 10;
+}
+button.slick-prev {
+  left: 20px;
+  z-index: 10;
+}
+button.slick-next::before {
+  color: #151515;
+  content: "\276F";
+  background-color: wheat;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.slick-prev::before {
+  color: #151515;
+  content: "\276E";
+  background-color: wheat;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+.mySwiper .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+.mySwiper .swiper-button-next:hover {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 6px;
+}
+.mySwiper .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+.mySwiper .swiper-button-prev:hover {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 6px;
+}
+.mySwiper .swiper-button-next::after {
+  content: 'next';
+  font-size: medium;
+  color: white;
+}
+.mySwiper .swiper-button-prev::after {
+  content: 'prev';
+  font-size: medium;
+  color: white;
+}
+.mySwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fff;
+}
+.mySwiper .swiper-pagination .swiper-pagination-bullet {
+  background: #fff;
+}
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}

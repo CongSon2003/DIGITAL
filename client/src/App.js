@@ -5,6 +5,7 @@ import {
   AboutUs,
   Brand,
   Cart,
+  ContactUs,
   Faq,
   Heading,
   Home,
@@ -84,6 +85,7 @@ function App() {
           <Route path={Path.BLOGS_URL} element={<Blogs />} />
           <Route path={Path.PRODUCTS} element={<Products />} />
           <Route path={Path.PRODUCTS_ALL_URL} element={<ProductAll />} />
+          <Route path={Path.PAGE_CONTACT_US_URL} element = {<ContactUs/>}/>
           <Route
             path={Path.DETAIL_PRODUCT__CATEGORY__PID__TITLE}
             element={<DetailProduct />}

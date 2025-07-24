@@ -7,6 +7,7 @@ const brandRouter = require("./brand");
 const couponRouter = require("./coupon");
 const orderRouter = require('./order');
 const insertRouter = require("./insert");
+const mailRouter = require('./mail');
 const {
   globalErrorHandler,
   errNotFound,
@@ -21,6 +22,7 @@ const initRouters = (app) => {
   app.use("/api/coupon", couponRouter);
   app.use("/api/order", orderRouter);
   app.use("/api/insert", insertRouter);
+  app.use("/api/mail", mailRouter);
   // Use the errNotFound middleware
   app.use(errNotFound);
   app.use(globalErrorHandler);

@@ -19,5 +19,4 @@ const sendMail = asyncHandler (async ({email, html, subject}) => {
   });
   return info
 })
-
 module.exports = sendMail

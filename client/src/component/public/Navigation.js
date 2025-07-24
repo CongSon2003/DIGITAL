@@ -3,6 +3,7 @@ import { navigation } from "../../ultils/contant";
 import { createSearchParams, Link, NavLink, useSearchParams } from "react-router-dom";
 import { FaCaretDown } from "react-icons/fa";
 import withBase from "HOCS/withBase";
+import path from "ultils/path";
 const Navigation = ({navigate}) => {
   const [isHover, setIsHover] = useState(false);
   const [valueSearch, setValueSearch] = useState('');
@@ -102,7 +103,7 @@ const Navigation = ({navigate}) => {
               </NavLink>
             );
           })}
-          <NavLink className="hover:text-main text-[#1D1D1D] font-[Poppins] text-sm">
+          <NavLink to={path.PAGE_CONTACT_US_URL} className="hover:text-main text-[#1D1D1D] font-[Poppins] text-sm">
             CONTACT US
           </NavLink>
         </div>

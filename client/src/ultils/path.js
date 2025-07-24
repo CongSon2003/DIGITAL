@@ -17,6 +17,7 @@ const path = {
   PAGE_CART_URL : 'cart',
   PAGE_CONTATS_US_URL : 'pages/contact-us',
   PAGE_ABOUT_US_URL : 'pages/about-us',
+  PAGE_CONTACT_US_URL : 'pages/contact-us',
   PAGE_SERVICES_URL : 'pages/services',
   PAGE_FAQ_URL : 'pages/faq',
   PAGE_TYPOGRAPHY_URL : 'pages/typography',

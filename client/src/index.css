@@ -411,3 +411,7 @@ button.slick-prev::before {
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
+/*
+max-width <= 1024px > apple
+min-width >= 1024px > app;e
+*/

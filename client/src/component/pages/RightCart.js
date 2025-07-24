@@ -33,7 +33,7 @@ const RightCart = ({dispatch, navigate}) => {
     }
   }, [totalMoney, currentUser])
   return (
-    <div onClick={(e) => e.stopPropagation()} className={`bg-black h-screen ${isShowRightCart === 2 ? 'animate-slide-left' : isShowRightCart === 3 ? "animate-slide-right" : "invisible"} max-h-screen w-[400px] grid grid-rows-10 fixed text-white`}>
+    <div onClick={(e) => e.stopPropagation()} className={`bg-black h-screen ${isShowRightCart === 2 ? 'animate-slide-left' : isShowRightCart === 3 ? "animate-slide-right" : "invisible"} max-h-screen w-[400px] max-sm:w-[300px] grid grid-rows-10 fixed text-white`}>
       <header className='border-b border-[#343535] flex justify-between items-center row-span-1 px-[30px]'>
         <h2 className='uppercase text-xl font-semibold'>your cart</h2>
         <IoMdClose size={25} className='cursor-pointer' onClick={() => dispatch(showRightCart({isShowRightCart : 3}))}/>

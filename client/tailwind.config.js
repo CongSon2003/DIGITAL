@@ -91,6 +91,16 @@ module.exports = {
             transform: "translateX(400px)"
           }
         },
+        "slide-right-menu" : {
+         "0%" : {
+            "-webkit-transform" : "translateX(-300px)",
+            transform: "translateX(-300px)"
+          },
+          "100%" : {
+            "-webkit-transform" : "translateX(0px)",
+            transform: "translateX(0px)"
+          }
+        },
         "slide-top-new-arrivals": {
           "0%": {
             "-webkit-transform": "translateY(30px)",
@@ -171,6 +181,7 @@ module.exports = {
         "slide-out-left" : "slide-out-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
         "fade-out-bottom" : "fade-out-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
         "slide-right" : "slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
+        "slide-right-menu" : "slide-right-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
         "slide-tl" : "slide-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
         "scale-out-center" : "scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both",
         "fade-out" : "fade-out 1s ease-out both",

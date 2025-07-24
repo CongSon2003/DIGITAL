@@ -4,7 +4,8 @@ import { createSearchParams, Link, NavLink, useSearchParams } from "react-router
 import { FaCaretDown } from "react-icons/fa";
 import withBase from "HOCS/withBase";
 import path from "ultils/path";
-const Navigation = ({navigate}) => {
+import { FiMenu } from "react-icons/fi";
+const Navigation = ({navigate, handleShowMenu}) => {
   const [isHover, setIsHover] = useState(false);
   const [valueSearch, setValueSearch] = useState('');
   const [searchParams] = useSearchParams();
@@ -37,8 +38,8 @@ const Navigation = ({navigate}) => {
   }, [searchParams])
   return (
     <div className="w-full flex justify-center font-[Poppins]">
-      <div className="flex items-center justify-between w-main py-2 border-y">
-        <div className="flex items-center gap-4 w-[80%]">
+      <div className="flex items-center justify-between w-main py-2 border-y max-xl:w-screen max-xl:px-5">
+        <div className="flex items-center gap-4 w-[80%] max-lg:hidden">
           {navigation.map((item) => {
             return (
               <NavLink
@@ -107,7 +108,10 @@ const Navigation = ({navigate}) => {
             CONTACT US
           </NavLink>
         </div>
-        <div className="w-[20%] font-[Poppins] text-sm border-r border-l border-[red] px-[10px]">
+        <div className="hidden max-lg:flex">
+          <button type="button" onClick={handleShowMenu} className="cursor-pointer"><FiMenu size={25}/></button>
+        </div>
+        <div className="w-[250px] max-lg:w-[200px] font-[Poppins] text-sm border-r border-l border-[red] px-[10px]">
           <input
             onKeyDown={handleSearch}
             value={valueSearch}

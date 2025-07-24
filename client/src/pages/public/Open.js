@@ -21,7 +21,7 @@ const Open = () => {
   }, [isShowSuggestProduct]);
   console.log(isShowSuggestProduct);
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col md:gap-5">
       <ScrollButton />
       {isShowSuggestProduct !== 1 && (
         <SuggestProduct
@@ -33,7 +33,7 @@ const Open = () => {
       <div className="w-full flex flex-col">
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

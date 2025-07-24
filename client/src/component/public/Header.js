@@ -5,16 +5,19 @@ import { Navigation } from "./";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { BsGoogle } from "react-icons/bs";
+import { navigation } from "../../ultils/contant";
 import { GrInstagram } from "react-icons/gr";
-import { IoLogoPinterest } from "react-icons/io";
+import { IoLogoPinterest, IoMdClose } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import logo from "../../assets/logo_digital_new_250x.png";
 import { MdEmail } from "react-icons/md";
 import { FaShoppingBag } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 import Path from "ultils/path";
 import {
   apiRegister,
@@ -30,7 +33,10 @@ import { MdAdminPanelSettings } from "react-icons/md";
 import { getCurrentUser } from "../../store/user/asyncUserAction";
 import path from "ultils/path";
 import { showRightCart } from "store/app/appSlice";
+import { FiMenu } from "react-icons/fi";
 const Header = () => {
+  const [isShowMenu, setIsShowMenu] = useState(1);
+
   const [isLogin, setIslogin] = useState(true);
   const { isLoggedIn, currentUser } = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
@@ -170,12 +176,14 @@ const Header = () => {
       document.addEventListener("click", handleClickOutOption);
     };
   }, []);
-
+  const handleShowMenu = () => {
+    setIsShowMenu(2);
+  }
   return (
     <>
-      <div className="homeHeader w-full flex flex-col">
+      <div className="homeHeader w-full flex flex-col max-md:hidden">
         <div className="topHeader bg-[#ee3231] text-white flex flex-col items-center py-[10px] text-xs font-[Poppins]">
-          <div className="flex justify-between w-main">
+          <div className="flex justify-between w-main max-xl:w-screen max-xl:px-5">
             <div className="left-area flex items-center font-[Poppins]">
               <div className="pr-4">
                 ORDER ONLINE OR CALL US (+1800) 000 8808
@@ -243,7 +251,7 @@ const Header = () => {
                     <span className="px-[8px] border-l border-[#e5e7eb60]">
                       <BsGoogle className="cursor-pointer hover:text-black" />
                     </span>
-                    <span className="px-[8px] border-l border-[#e5e7eb60]">
+                    <span className="pl-[8px] border-l border-[#e5e7eb60]">
                       <IoLogoPinterest className="cursor-pointer hover:text-black" />
                     </span>
                   </div>
@@ -270,7 +278,7 @@ const Header = () => {
                   <span className="px-[8px] border-l border-[#e5e7eb60]">
                     <BsGoogle className="cursor-pointer hover:text-black" />
                   </span>
-                  <span className="px-[8px] border-l border-[#e5e7eb60]">
+                  <span className="pl-[8px] border-l border-[#e5e7eb60]">
                     <IoLogoPinterest className="cursor-pointer hover:text-black" />
                   </span>
                 </div>
@@ -279,25 +287,21 @@ const Header = () => {
           </div>
         </div>
         <div className="sectionHeader flex items-center justify-center pb-[30px] pt-[20px] text-sm font-[Poppins]">
-          <div className="w-main flex justify-between items-center h-[44px]">
-            <div className="flex items-center w-[30%]">
+          <div className="w-main flex justify-between items-center h-[44px] max-xl:w-screen max-xl:px-5">
+            <div className="flex items-center">
               <Link to={`/${Path.HOME_URL}`}>
-                <img
-                  src={logo}
-                  alt="logo"
-                  className="w-[245px] object-contain"
-                />
+                <img src={logo} alt="logo" className="w-fit object-contain" />
               </Link>
             </div>
-            <div className="pl-[20px] flex items-center w-[70%] h-[40px] justify-end">
-              <div className="flex flex-col gap-1 px-[20px] border-r">
+            <div className="pl-[20px] flex items-center h-[40px] justify-end">
+              <div className="flex flex-col gap-1 px-[20px] border-r max-lg:hidden">
                 <div className="flex items-center font-semibold gap-1">
                   <FaPhoneAlt className="text-main" />
                   <span className="ml-2 text-[#505050]">(+1800) 000 8808</span>
                 </div>
                 <div className="text-xs">Mon-Sat 9:00AM - 8:00PM</div>
               </div>
-              <div className="flex flex-col gap-1 text-center px-[20px] border-r">
+              <div className="flex flex-col gap-1 text-center px-[20px] max-lg:hidden">
                 <div className="flex items-center font-semibold gap-1">
                   <MdEmail className="text-main" />
                   <span className="ml-2 uppercase text-[#505050]">
@@ -307,7 +311,7 @@ const Header = () => {
                 </div>
                 <div className="text-xs">Online Support 24/7</div>
               </div>
-              <div className="flex px-[20px] h-full relative">
+              <div className="flex px-[20px] h-full relative border-l">
                 <Link
                   to={`/${path.PAGE_WISHLIST_URL}`}
                   className="flex items-center font-semibold gap-1"
@@ -319,10 +323,8 @@ const Header = () => {
                 </div>
               </div>
               <div
-                onClick={() =>
-                  dispatch(showRightCart({ isShowRightCart: 2 }))
-                }
-                className="flex cursor-pointer items-center gap-2 px-[20px] border-l h-full"
+                onClick={() => dispatch(showRightCart({ isShowRightCart: 2 }))}
+                className="flex cursor-pointer items-center gap-2 pl-5 border-l h-full"
               >
                 <div>
                   <FaShoppingBag className="text-main text-xl" />
@@ -335,8 +337,39 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <Navigation />
+        <Navigation handleShowMenu = {handleShowMenu}/>
       </div>
+      <header className="max-md:flex text-black h-[80px] items-center justify-between px-5 hidden">
+        <button type="button" className="cursor-pointer" onClick={() => setIsShowMenu(2)}>
+          <FiMenu size={30} />
+        </button>
+        <Link to={`/${Path.HOME_URL}`}>
+          <img src={logo} alt="logo" className="w-fit object-contain" />
+        </Link>
+        <button type="button" className="hover:text-main" onClick={() => dispatch(showRightCart({ isShowRightCart: 2 }))}>
+          <FaShoppingCart size={28}/>
+        </button>
+      </header>
+      {isShowMenu !== 1 && <div className={`${isShowMenu === 2 ? 'animate-slide-right-menu' : isShowMenu === 3 ? 'animate-slide-out-left' : 'invisible'} fixed left-0 top-0 bg-black h-screen w-[300px] font-[Poppins] z-50`}>
+        <div className="px-5 pb-5">
+          <div className="h-[80px] flex justify-start items-center border-b border-[#343535]">
+            <button type="button" onClick={() => setIsShowMenu(3)}>
+              <IoMdClose color="white" size={20}/>
+            </button>
+          </div>
+          <ul className="text-white flex flex-col">
+            {navigation.map(item => (
+              <li key={item.id} className="p-[10px] border-b border-[#343535] flex items-center justify-between">
+                <Link to={item.path}>{item.value}</Link>
+                <button type="button"><FaPlus size={15}/></button>
+              </li>
+            ))}
+            <li className="p-[10px] border-b border-[#343535] flex items-center justify-between">
+              <Link>CONTACT US</Link>
+            </li>
+          </ul>
+        </div>
+      </div>}
       {isLoginOrRegister && (
         <div
           onClick={() => setIsLoginOrRegister((prev) => !prev)}
@@ -344,7 +377,7 @@ const Header = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white w-[30%] relative"
+            className="bg-white w-[500px] relative"
           >
             {isLogin && (
               <div className="w-full relative p-5 flex flex-col gap-5 justify-center items-center animate-fade-in">

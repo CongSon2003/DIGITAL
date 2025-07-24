@@ -71,7 +71,7 @@ function App() {
               (isShowRightCart === 3 || isShowRightCart === 1) && "hidden"
             }`}
           ></div>
-          <div className="absolute right-[400px] top-0 bottom-0 z-50">
+          <div className="absolute right-[400px] max-sm:right-[300px] top-0 bottom-0 z-50">
             <RightCart />
           </div>
         </>

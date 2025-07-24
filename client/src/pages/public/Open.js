@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Footer, Header } from "../../component/public";
+import { Header } from "../../component/public";
 import { ScrollButton, SuggestProduct } from "component/common";
 const Open = () => {
   const [isShowSuggestProduct, setIsShowSuggestProduct] = useState(1);

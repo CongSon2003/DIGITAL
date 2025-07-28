@@ -9,18 +9,33 @@ import { Sidebar } from '../../component/sideBar'
 const Home = () => {
   return (
     <div className="flex flex-col gap-5 justify-center w-full items-center font-[Poppins]">
-      <div className="flex flex-col justify-center w-main gap-5">
-        <div className="flex gap-5">
-          <div className="flex flex-col gap-5 w-[28%]">
-            <Sidebar />
-            <DailyDeals />
-          </div>
-          <div className="flex flex-col gap-5 w-[72%]">
+      <div className="flex flex-col justify-center gap-5">
+        <div className="gap-5 md:flex flex-col hidden w-main">
+          <div className="flex gap-5">
+            <div className="w-[34%]">
+              <Sidebar />
+            </div>
             <Banner />
-            <Bestseller />
+          </div>
+          <div className="flex gap-5">
+            <div className="w-[25%]">
+              <DailyDeals/>
+            </div>
+            <div className="w-[73%]">
+              <Bestseller />
+            </div>
           </div>
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="max-md:flex flex-col hidden items-center">
+          <div className="w-[97vw] mb-[20px] pl-5 pr-4">
+            <Banner />
+          </div>
+          <div className="flex pl-5 pr-4 mb-5">
+            <DailyDeals />
+          </div>
+          <Bestseller isResponsive= {true}/>
+        </div>
+        <div className="flex flex-col gap-5 w-main max-lg:w-[97vw] px-5">
           <FeatureProducts />
           <GalleryAdvanced />
           <NewArrivals />

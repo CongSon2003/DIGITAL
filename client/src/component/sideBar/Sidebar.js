@@ -14,8 +14,8 @@ const Sidebar = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [app]);
   return (
-    <div className="w-full flex flex-col gap-5 border font-[Poppins] text-sm">
-      <div className="flex flex-col w-full">
+    <div className="flex flex-col gap-5 border font-[Poppins] text-sm">
+      <div className="flex flex-col w-full justify-between">
         <div className="flex items-center gap-3 py-[10px] px-[20px] font-semibold bg-main text-white">
           <span>
             <GiHamburgerMenu className="text-xl" />

@@ -183,7 +183,7 @@ const Header = () => {
     <>
       <div className="homeHeader w-full flex flex-col max-md:hidden">
         <div className="topHeader bg-[#ee3231] text-white flex flex-col items-center py-[10px] text-xs font-[Poppins]">
-          <div className="flex justify-between w-main max-xl:w-screen max-xl:px-5">
+          <div className="flex justify-between w-main max-xl:w-[98vw] max-xl:px-5">
             <div className="left-area flex items-center font-[Poppins]">
               <div className="pr-4">
                 ORDER ONLINE OR CALL US (+1800) 000 8808
@@ -347,7 +347,7 @@ const Header = () => {
           <img src={logo} alt="logo" className="w-fit object-contain" />
         </Link>
         <button type="button" className="hover:text-main" onClick={() => dispatch(showRightCart({ isShowRightCart: 2 }))}>
-          <FaShoppingCart size={28}/>
+          <FaShoppingCart size={26}/>
         </button>
       </header>
       {isShowMenu !== 1 && <div className={`${isShowMenu === 2 ? 'animate-slide-right-menu' : isShowMenu === 3 ? 'animate-slide-out-left' : 'invisible'} fixed left-0 top-0 bg-black h-screen w-[300px] font-[Poppins] z-50`}>
@@ -370,6 +370,7 @@ const Header = () => {
           </ul>
         </div>
       </div>}
+      {isShowMenu !== 1 && <div className={`${isShowMenu === 2 ? 'animate-fade-in' : isShowMenu === 3 ? 'animate-fade-out' : 'invisible'} fixed inset-0 bg-[rgba(0,0,0,0.5)] z-40`} onClick={() => setIsShowMenu(3)}></div>}
       {isLoginOrRegister && (
         <div
           onClick={() => setIsLoginOrRegister((prev) => !prev)}

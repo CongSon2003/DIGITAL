@@ -56,7 +56,7 @@ const ItemProduct = ({ itemProductData, isNew, normal, type, navigate, dispatch 
           SetHoverSelectOption(false);
           setHoverSelect(3)
         }}
-        className="w-full relative border p-[15px] flex flex-auto flex-col justify-center bg-white"
+        className="w-full relative border p-[15px] flex flex-col justify-center bg-white"
       >
         <div className="w-full mb-[20px] relative">
           { type !== 'NewArrivals' && 
@@ -76,7 +76,7 @@ const ItemProduct = ({ itemProductData, isNew, normal, type, navigate, dispatch 
           >
             <img
               src={itemProductData?.thumb}
-              className={clsx(type === 'NewArrivals' ? "max-h-[345px] w-full object-cover cursor-pointer outline-none" : "max-h-[250px] w-full object-cover cursor-pointer")}
+              className={clsx(type === 'NewArrivals' ? "max-h-[345px] w-full object-contain cursor-pointer outline-none" : "max-h-[250px] w-full object-cover cursor-pointer")}
               alt=""
             />
           </Link> 

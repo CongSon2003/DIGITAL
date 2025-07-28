@@ -16,7 +16,7 @@ const DailyDeals = () => {
       totalRatings: { gt: 4 },
       // page: Math.round(Math.random() * 5),
     });
-    
+
     if (result?.success) {
       setDailyDealys(result.response[0]);
       // setHours(24 - new Date().getHours());
@@ -63,8 +63,12 @@ const DailyDeals = () => {
           </span>
         </div>
         <div className="flex flex-col text-center gap-2">
-          <div className="mb-2">
-            <img src={dailyDealys?.thumb} className="object-contain cursor-pointer w-full h-[255px] border-none" alt="dailyDealys" />
+          <div className="mb-2 flex justify-center">
+            <img
+              src={dailyDealys?.thumb}
+              className="object-cover cursor-pointer border-none w-auto"
+              alt="dailyDealys"
+            />
           </div>
           <div className="flex flex-col justify-center text-center gap-1">
             <div className="text-[#2b3743] flex justify-center line-clamp-1 mb-2">
@@ -83,7 +87,7 @@ const DailyDeals = () => {
               <span>{fomantMoney(dailyDealys?.price)} VND</span>
             </div>
           </div>
-          <div>
+          <div className="">
             <div className="flex justify-between items-start mb-[15px]">
               <CountDown time={hours} unit={"Hours"} />
               <CountDown time={minutes} unit={"Minutes"} />

@@ -13,9 +13,9 @@ import { FaCcPaypal } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center font-[Poppins]">
-      <div className="w-full bg-main flex flex-col items-center py-[25px]">
-        <div className="w-main flex items-center justify-between">
-          <div className="text-white flex flex-col flex-1">
+      <div className="w-full bg-main flex flex-col items-center py-[15px]">
+        <div className="md:w-main flex max-md:flex-col w-full items-center justify-between max-md:px-5">
+          <div className="text-white flex flex-col flex-1 w-full mb-[15px] mt-[11px]">
             <div className="font-normal text-xl uppercase">
               Sign up to Newsletter
             </div>
@@ -23,14 +23,14 @@ const Footer = () => {
               Subscribe now and receive weekly newsletter
             </div>
           </div>
-          <div className="flex-1 flex items-center text-white">
+          <div className="flex-1 flex items-center text-white w-full">
             <input id="input_email" className="h-[50px] px-5 w-full rounded-l-full placeholder:text-gray-300 placeholder:text-sm outline-none bg-[#ffffff1a]" type="text" placeholder="Email address"/>
             <div className="bg-[#ffffff1a] h-[50px] pr-5 flex items-center rounded-r-full"><MdEmail size={18}/></div>
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#191919] flex flex-col text-white items-center justify-center py-[50px]">
-        <div className="w-main flex">
+      <div className="w-full bg-[#191919] flex flex-col text-white md:items-center md:justify-center pl-5 text-start py-[50px]">
+        <div className="md:w-main flex max-md:flex-col">
           <div className="flex-2 gap-5 flex flex-col">
             <div className="uppercase font-semibold pl-[15px] border-l-[3px] border-[red]">
               About us
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full flex justify-center bg-[#0f0f0f] text-white items-center py-3">
-        <div className="w-main flex items-center justify-between">
+        <div className="md:w-main flex items-center w-full max-md:px-5 justify-between">
           <div className="flex items-center gap-1 text-xs text-[#b7b7b7]">
             <p>© 2025, Digital World 2</p>
             <p>Powered by Shopify</p>

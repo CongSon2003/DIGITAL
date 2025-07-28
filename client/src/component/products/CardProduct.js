@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CardProduct = ({ data }) => {
   return (
-    <div className="w-1/3 flex-auto px-[10px] mb-5">
+    <div className="px-[10px] mb-5">
       <div className="flex p-[15px] border w-full gap-5">
         <div className="w-[30%]">
           <img src={data?.thumb} className="w-full object-contain cursor-pointer" alt="" />

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Header } from "../../component/public";
+import { Footer, Header } from "../../component/public";
 import { ScrollButton, SuggestProduct } from "component/common";
 const Open = () => {
   const [isShowSuggestProduct, setIsShowSuggestProduct] = useState(1);
@@ -23,17 +23,17 @@ const Open = () => {
   return (
     <div className="flex flex-col md:gap-5">
       <ScrollButton />
-      {isShowSuggestProduct !== 1 && (
+      {/* {isShowSuggestProduct !== 1 && (
         <SuggestProduct
           handleShowSuggestProduct={handleShowSuggestProduct}
           isShowSuggestProduct={isShowSuggestProduct}
         />
-      )}
+      )} */}
       <Header />
       <div className="w-full flex flex-col">
         <Outlet />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

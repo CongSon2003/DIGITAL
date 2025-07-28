@@ -79,7 +79,7 @@ const Navigation = ({navigate, handleShowMenu}) => {
                     </ul>
                   </div>
                 )}
-                {item.id === 4 && isHover && (
+                {/* {item.id === 4 && isHover && (
                   <div
                     onMouseMove={() => handleHover(item.id, "Move")}
                     onMouseLeave={() => handleHover(item.id, "Leave")}
@@ -100,7 +100,7 @@ const Navigation = ({navigate, handleShowMenu}) => {
                         ))}
                     </ul>
                   </div>
-                )}
+                )} */}
               </NavLink>
             );
           })}

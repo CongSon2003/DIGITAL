@@ -6,9 +6,9 @@ const AboutUs = () => {
     <div className="w-full flex flex-col gap-5">
       <Breadcrumb title={"About Us"} pages={"About Us"} />
       <div className="w-full bg-white flex justify-center font-[Poppins] pb-[20px]">
-        <div className="w-main flex flex-col gap-4">
-          <div className="grid grid-cols-2">
-            <div className="col-span-1 text-sm text-[#505050]">
+        <div className="w-main flex flex-col gap-4 max-md:px-5">
+          <div className="grid md:grid-cols-2">
+            <div className="col-span-1 text-sm text-[#505050] mb-[10px]">
               <p className="mb-[10px]">A great About Us page helps builds trust between you and your customers. The more content you provide about you and your business, the more confident people will be when purchasing from your store.</p>
               <p className="mb-[10px]">Your About Us page might include:</p>
               <ul className="mb-[10px]">

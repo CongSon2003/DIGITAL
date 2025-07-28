@@ -35,7 +35,7 @@ const Home = () => {
           </div>
           <Bestseller isResponsive= {true}/>
         </div>
-        <div className="flex flex-col gap-5 w-main max-lg:w-[97vw] px-5">
+        <div className="flex flex-col gap-5 w-main max-lg:w-[97vw] max-md:px-5">
           <FeatureProducts />
           <GalleryAdvanced />
           <NewArrivals />

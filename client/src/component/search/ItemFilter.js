@@ -159,7 +159,7 @@ const ItemFilter = ({name, active, setActive, type = 'checkbox'}) => {
     <div onClick={() => setActive(name)} className={`relative flex text-sm items-center p-3 ${active === name ? 'border-[red]' : 'border-gray-600'} border border-solid  hover:shadow-md cursor-pointer`}>
       <span className='mr-7 capitalize'>{name}</span>
       <IoChevronDownOutline />
-      { active === name && <div onClick={(e) => e.stopPropagation()} className='absolute left-0 border border-solid z-20 w-[23rem] top-custom-top'>
+      { active === name && <div onClick={(e) => e.stopPropagation()} className='absolute left-0 border border-solid z-20 w-[20rem] top-custom-top'>
         {type === 'checkbox' && 
           <div className='bg-white'>
             <div className='flex items-center justify-between border-b py-2 px-6'>

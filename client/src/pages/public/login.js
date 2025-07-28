@@ -45,7 +45,7 @@ const Login = ({ dispatch, navigate }) => {
       <Breadcrumb title={"Login"} pages={"Login"} />
       {/* Assuming pages is an array */}
       <div className="w-full bg-white flex justify-center font-[Poppins] pb-[20px]">
-        <div className="w-1/2 relative p-5 flex flex-col gap-5 justify-center items-center animate-fade-in">
+        <div className="md:w-1/2 relative p-5 flex flex-col gap-5 justify-center items-center animate-fade-in">
           <h3 className="uppercase font-semibold text-xl text-[#505050]">
             Login Account
           </h3>

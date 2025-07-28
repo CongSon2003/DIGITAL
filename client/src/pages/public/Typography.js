@@ -8,7 +8,7 @@ const Typography = () => {
       <div className="w-full bg-white flex justify-center text-[#505050] pb-5">
         <div className="w-main flex flex-col gap-4">
           <div className="flex flex-col gap-5">
-            <div>
+            <div className="max-md:px-5">
               <span className="text-2xl font-semibold">HEADING</span>
               <h1 className="text-2xl font-semibold mb-[12px] mt-[20px]">
                 H1 Heading
@@ -18,9 +18,9 @@ const Typography = () => {
               <h4 className="text-base mb-[8px]">H4 Heading</h4>
               <h5 className="text-xs mb-[6px]">H5 Heading</h5>
             </div>
-            <div>
+            <div className="max-md:px-5">
               <span className="text-2xl font-semibold block mb-5">COLUMN</span>
-              <div className="grid grid-cols-6 grid-rows-3 text-sm">
+              <div className="md:grid grid-cols-6 grid-rows-3 text-sm flex flex-col gap-3">
                 <p className="col-span-6 row-span-1">
                   orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                   nulla leo, gravida nec iaculis at, ullamcorper vitae libero.
@@ -59,7 +59,7 @@ const Typography = () => {
                   vulputate suscipit vestibulum sit amet diam. Vivamus dapibus
                   metus non ex egestas, sed laoreet nibh.
                 </p>
-                <p className="col-span-3 row-span-1 pl-5">
+                <p className="col-span-3 row-span-1 md:pl-5">
                   Nullam ultricies consectetur suscipit. Pellentesque gravida,
                   orci eu pharetra tempor, sem ante iaculis orci, et vehicula
                   urna orci varius tellus. Curabitur lectus libero, porta ac
@@ -70,10 +70,10 @@ const Typography = () => {
                 </p>
               </div>
             </div>
-            <div>
+            <div className="max-md:px-5">
               <span className="text-2xl font-semibold mb-5 block">DROPCAP</span>
-              <div className="grid grid-cols-2 text-sm">
-                <p className="pl-5 col-span-1">
+              <div className="grid md:grid-cols-2 text-sm">
+                <p className="pl-5 col-span-1 max-md:mb-3">
                   <span className="text-main text-7xl float-left pl-[13px] pr-[17px]">
                     E
                   </span>

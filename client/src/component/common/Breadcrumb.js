@@ -35,8 +35,8 @@ const Breadcrumb = ({title, category, brand, pages}) => {
   const breadcrumbs = useBreadcrumbs(routes);
   console.log(breadcrumbs);
   return (
-    <div className='w-full bg-[#f7f7f7] flex flex-col justify-center items-center py-[15px] mt-[-20px] font-[Poppins]'>
-      <div className='w-main flex flex-col gap-2'>
+    <div className='w-full bg-[#f7f7f7] flex flex-col justify-start md:justify-center md:items-center py-[15px] mt-[-20px] font-[Poppins]'>
+      <div className='md:w-main flex flex-col gap-2 max-md:pl-5'>
         <h3 className='uppercase text-[#151515] font-semibold text-lg'>{title}</h3>
         <div className='flex items-center gap-1'>
           <Link to={breadcrumbs[0].match.pathname} className='flex items-center gap-1 text-sm'>

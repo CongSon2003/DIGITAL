@@ -6,6 +6,7 @@ import { Filterby } from '../../component/search'
 import { apigetProducts} from '../../apis';
 import Masonry from 'react-masonry-css'
 import ReactPaginate from 'react-paginate';
+import { FiFilter } from "react-icons/fi";
 const Products = () => {
   const { category } = useParams();
   const [searchParams] = useSearchParams();
@@ -17,7 +18,7 @@ const Products = () => {
     default: 4,
     1100: 3,
     700: 2,
-    500: 1
+    500: 2
   };
   useEffect(() => {
     const queryArray = [];
@@ -109,14 +110,14 @@ const Products = () => {
   return (
     <div className='w-full flex flex-col gap-5'>
       <Breadcrumb title={category} category={category}/> 
-      <div className='w-full flex flex-col justify-center items-center'>
-        <div className='w-main flex flex-col gap-4'>
-          <div className='border p-3 flex flex-col gap-2'>
+      <div className='w-full flex flex-col justify-center items-center max-md:px-5'>
+        <div className='md:w-main flex flex-col gap-4'>
+          <div className='border p-2 flex flex-col gap-3'>
             <div className='flex items-center justify-center'>
               <div className='w-4/5 flex-auto gap-2 flex flex-c'>
                 <Filterby title={'Filter by'}/>
               </div>
-              <div className='w-1/5 flex-auto'>
+              <div className='flex-auto'>
                 <div className='flex flex-col justify-center gap-2 text-[#505050] px-4'>
                   <label htmlFor='SortBy' className='text-base font-semibold'>Sort by</label>
                   <select id='SortBy' name = "SortBy" onChange={(e) => changeValue(e)} className='p-3 outline-none border-gray-600 border cursor-pointer'>
@@ -159,8 +160,8 @@ const Products = () => {
               pageClassName = ""
               pageLinkClassName = "w-full h-full py-[8px] px-[14px] border rounded hover:bg-gray-200 hover:text-black"
               breakClassName=''
-              nextClassName='border bg-gray-200 py-[6px] px-[12px] rounded'
-              previousClassName='border bg-gray-200 py-[6px] px-[12px] rounded'
+              nextClassName='border bg-gray-200 md:py-[6px] md:px-[10px] py-[5px] px-[8px] rounded'
+              previousClassName='border bg-gray-200 md:py-[6px] md:px-[12px] py-[5px] px-[8px] rounded'
               activeClassName = ""
               activeLinkClassName = "border-none bg-main text-white rounded hover:bg-main hover:text-white"
               pageCount={pageCount}

@@ -7,8 +7,8 @@ const Services = () => {
       <div className="w-full bg-white flex justify-center font-[Poppins] pb-[20px]">
         <div className="w-main flex flex-col gap-4">
           <div className='flex flex-col'>
-            <div className="grid grid-cols-2 mb-12">
-              <div className="col-span-1">
+            <div className="grid md:grid-cols-2 mb-12 max-md:px-5">
+              <div className="col-span-1 max-md:mb-[10px]">
                 <img className='w-[580px] h-fit object-cover' src="https://cdn.shopify.com/s/files/1/1636/8779/files/9069783_orig.jpg?v=1491836163" alt=""/>
               </div>
               <div className="col-span-1 text-sm text-[#505050]">

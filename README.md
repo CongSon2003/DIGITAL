@@ -18,6 +18,9 @@ DIGITAL là trang thương mại điện tử chuyên bán các sản phẩm cô
 
 <img width="1919" height="795" alt="image" src="https://github.com/user-attachments/assets/4a785d6a-60a4-448d-a1ec-42f28d22fcbc" />
 
+<img width="1919" height="872" alt="image" src="https://github.com/user-attachments/assets/9c5cb09e-b19a-466c-8071-0815a89108fa" />
+
+
 📄 Trang chi tiết sản phẩm
 
 <img width="1919" height="876" alt="image" src="https://github.com/user-attachments/assets/c830f340-7a3a-45bf-8f72-afe4097d08ba" />

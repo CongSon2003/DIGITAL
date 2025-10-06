@@ -34,6 +34,7 @@ DIGITAL là trang thương mại điện tử chuyên bán các sản phẩm cô
 <img width="1919" height="870" alt="image" src="https://github.com/user-attachments/assets/870b5ba8-9ae2-4c2d-96f1-c608103b3ab9" />
 
 🚀 Công nghệ sử dụng
+
 ✔ Frontend
 
 ReactJS
@@ -59,6 +60,7 @@ MongoDB
 JWT (xác thực người dùng)
 
 ⭐ Chức năng chính
+
 🛍️ Người dùng & sản phẩm
 
 Xem danh sách sản phẩm

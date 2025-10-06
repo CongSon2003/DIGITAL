@@ -7,7 +7,8 @@ DIGITAL là trang thương mại điện tử chuyên bán các sản phẩm cô
 🔗 Link Github: https://github.com/CongSon2003/DIGITAL.git
 
 📸 Giao diện mẫu
-🏠 Trang chủ / Danh sách sản phẩm
+
+🏠 Trang chủ 
 
 <img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/15c2a06d-d81f-4956-b50d-ee95b91561a6" />
 
